@@ -2,8 +2,10 @@
 Final exam, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Isaiah Jolly.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
+import math
 
 
 def main():
@@ -75,7 +77,7 @@ And this one for n=14:
     :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: Implement and test this function.
+    # DONE: Implement and test this function.
     #          Some tests are already written for you (above).
     ####################################################################
     # IMPORTANT: In solving this problem,
@@ -88,6 +90,24 @@ And this one for n=14:
     #   (and then change the Xs back to spaces).
     # ------------------------------------------------------------------
 
+    for i in range(n):
+        for j in range(n - (i + 1)):
+            print(' ', end='')
+        for k in range(i + 1):
+            if k < 9:
+                print(k + 1, end='')
+            elif k >= 9:
+                print(int(math.fabs(10 - (k + 1))), end='')
+        print(' ', end='')
+        for l in range(i + 2):
+            print('*', end='')
+        print(' ', end='')
+        for m in range(n - i, 0, -1):
+            if m < 10:
+                print(m, end ='')
+            elif m >= 10:
+                print(m - 10, end='')
+        print('', end='\n')
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
