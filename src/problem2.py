@@ -419,7 +419,6 @@ def problem2c(x):
         n = n + 1
 
 
-
 ###############################################################################
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.
